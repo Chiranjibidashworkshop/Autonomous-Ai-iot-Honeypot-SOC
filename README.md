@@ -1,4 +1,4 @@
-# Autonomous AI-Driven IoT Honeypot SOC & Automated Mitigation Platform
+🔗 Autonomous AI-Driven IoT Honeypot SOC & Automated Mitigation Platform
 
 A presentation-ready cybersecurity research platform that combines:
 
