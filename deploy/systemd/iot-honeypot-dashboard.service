@@ -1,0 +1,15 @@
+[Unit]
+Description=IoT Honeypot SOC Dashboard
+After=network.target
+
+[Service]
+Type=simple
+User=honeypot
+WorkingDirectory=/opt/autonomous_ai_iot_honeypot_soc
+EnvironmentFile=/opt/autonomous_ai_iot_honeypot_soc/.env
+ExecStart=/opt/autonomous_ai_iot_honeypot_soc/.venv/bin/streamlit run src/soc_dashboard/app.py --server.address 127.0.0.1 --server.port 8501
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

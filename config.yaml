@@ -1,0 +1,41 @@
+server:
+  bind: "0.0.0.0"
+  http_port: 8080
+  ssh_port: 2222
+  telnet_port: 2323
+  mqtt_port: 1883
+  ftp_port: 2121
+
+personas:
+  camera:
+    vendor: "VisionSecure"
+    model: "VS-CAM-2200"
+    http_title: "VisionSecure IP Camera"
+    hostname: "vs-camera"
+  router:
+    vendor: "EdgeLink"
+    model: "EL-RTR-AC1200"
+    http_title: "EdgeLink Router Management"
+    hostname: "edgelink-gateway"
+  smart_plug:
+    vendor: "HomeGrid"
+    model: "HG-PLUG-2"
+    http_title: "HomeGrid Smart Plug"
+    hostname: "homegrid-plug"
+  nas:
+    vendor: "DataHarbor"
+    model: "DH-NAS-210"
+    http_title: "DataHarbor NAS"
+    hostname: "dataharbor-nas"
+
+listeners:
+  http_persona: camera
+  ssh_persona: router
+  telnet_persona: router
+  mqtt_persona: smart_plug
+  ftp_persona: nas
+
+policy:
+  investigate_score: 0.55
+  block_score: 0.92
+  require_repeated_events: 3

@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "ONE-CLICK SHOWCASE",
+      "type": "shell",
+      "windows": {
+        "command": "powershell",
+        "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}\\setup_and_start.ps1"]
+      },
+      "options": {"cwd": "${workspaceFolder}"},
+      "problemMatcher": []
+    },
+    {
+      "label": "START LIVE LAB",
+      "type": "shell",
+      "windows": {
+        "command": "powershell",
+        "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}\\start_live_lab.ps1"]
+      },
+      "options": {"cwd": "${workspaceFolder}"},
+      "problemMatcher": []
+    },
+    {
+      "label": "STOP PROJECT",
+      "type": "shell",
+      "windows": {
+        "command": "cmd",
+        "args": ["/c", "${workspaceFolder}\\STOP_PROJECT.bat"]
+      },
+      "options": {"cwd": "${workspaceFolder}"},
+      "problemMatcher": []
+    }
+  ]
+}

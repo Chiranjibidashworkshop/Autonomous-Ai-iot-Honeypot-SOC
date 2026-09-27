@@ -1,0 +1,28 @@
+AUTONOMOUS AI-DRIVEN IoT HONEYPOT SOC
+=====================================
+
+FASTEST WAY TO SHOW THE PROJECT
+
+1. Open this folder in VS Code.
+2. Double-click START_HERE.bat.
+3. Wait for the browser to open.
+4. Show: http://127.0.0.1:8501
+
+The one-click launcher installs the Python dependencies, creates the local virtual environment,
+trains the ML model, starts the five honeypot listeners and starts Streamlit.
+
+The default presentation mode generates clearly labeled synthetic telemetry automatically, so the
+SOC dashboard is not empty when you open it.
+
+STOP:
+  STOP_PROJECT.bat
+
+RESET FOR A FRESH DEMO:
+  RESET_SHOWCASE.bat
+  then START_HERE.bat
+
+LIVE AUTHORIZED LAB:
+  START_LIVE_LAB.bat
+
+IMPORTANT:
+  Real iptables enforcement is disabled by default. Use Linux/WSL2 for actual netfilter deployment.

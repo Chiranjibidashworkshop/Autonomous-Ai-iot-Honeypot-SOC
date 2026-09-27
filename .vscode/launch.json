@@ -1,0 +1,31 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "IoT Honeypot Core",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "src.iot_honeypot.main",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "name": "Streamlit SOC",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "streamlit",
+      "args": ["run", "src/soc_dashboard/app.py", "--server.address", "127.0.0.1", "--server.port", "8501"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "FULL PLATFORM",
+      "configurations": ["IoT Honeypot Core", "Streamlit SOC"],
+      "stopAll": true
+    }
+  ]
+}
